@@ -13,100 +13,122 @@ clear && cd /home/fabio
 if [ -d GitHub ]; then
     rm -rf GitHub
     echo -e "${azul}Criando repositório GitHub${fim}"
-    mkdir GitHub && cd GitHub && pwd
+    mkdir GitHub && cd GitHub
+    echo -e "${verde}Sucesso!${fim}"
 else
     echo -e "${azul}Criando repositório GitHub${fim}"
-    mkdir GitHub && cd GitHub && pwd
+    mkdir GitHub && cd GitHub
+    echo -e "${verde}Sucesso!${fim}"
 fi
 echo
 
 echo -e "${azul}Baixando o archlinux${fim}"
 sleep 2s
-if [ -d archlinux ]; then
-    echo -e "${verde}O diretório existe${fim}"
-else
-    git clone https://github.com/frib3iro/archlinux
+if git clone https://github.com/frib3iro/archlinux
+then
     echo -e "${verde}Sucesso!${fim}"
+else
+    echo -e "${vermelho}Falhou!${fim}"
+    exit 1
 fi
 echo
 
 echo -e "${azul}Baixando o archlinux2${fim}"
 sleep 2s
-if [ -d archlinux2 ]; then
-    echo -e "${verde}O diretório existe${fim}"
-else
-    git clone https://github.com/frib3iro/archlinux2
+if git clone https://github.com/frib3iro/archlinux2
+then
     echo -e "${verde}Sucesso!${fim}"
+else
+    echo -e "${vermelho}Falhou!${fim}"
+    exit 1
 fi
 echo
 
 echo -e "${azul}Baixando o vbz${fim}"
 sleep 2s
-if [ -d vbz ]; then
-    echo -e "${verde}O diretório existe${fim}"
-else
-    git clone https://github.com/frib3iro/vbz
+if git clone https://github.com/frib3iro/vbz
+then
     echo -e "${verde}Sucesso!${fim}"
+else
+    echo -e "${vermelho}Falhou!${fim}"
+    exit 1
 fi
 echo
 
 echo -e "${azul}Baixando o zshell${fim}"
 sleep 2s
-if [ -d zshell ]; then
-    echo -e "${verde}O diretório existe${fim}"
-else
-    git clone https://github.com/frib3iro/zshell
+if git clone https://github.com/frib3iro/zshell
+then
     echo -e "${verde}Sucesso!${fim}"
+else
+    echo -e "${vermelho}Falhou!${fim}"
+    exit 1
 fi
 echo
 
 echo -e "${azul}Baixando o gnome${fim}"
 sleep 2s
-if [ -d gnome ]; then
-    echo -e "${verde}O diretório existe${fim}"
-else
-    git clone https://github.com/frib3iro/gnome
+if git clone https://github.com/frib3iro/gnome
+then
     echo -e "${verde}Sucesso!${fim}"
+else
+    echo -e "${vermelho}Falhou!${fim}"
+    exit 1
 fi
 echo
 
 echo -e "${azul}Baixando o bin${fim}"
 sleep 2s
-if [ -d bin ]; then
-    echo -e "${verde}O diretório existe${fim}"
-else
-    git clone https://github.com/frib3iro/bin
+if git clone https://github.com/frib3iro/bin
+then
     echo -e "${verde}Sucesso!${fim}"
+else
+    echo -e "${vermelho}Falhou!${fim}"
+    exit 1
 fi
 echo
 
 echo -e "${azul}Baixando o bspwm${fim}"
 sleep 2s
-if [ -d bspwm ]; then
-    echo -e "${verde}O diretório existe${fim}"
-else
-    git clone https://github.com/frib3iro/bspwm
+if git clone https://github.com/frib3iro/bspwm
+then
     echo -e "${verde}Sucesso!${fim}"
+else
+    echo -e "${vermelho}Falhou!${fim}"
+    exit 1
 fi
 echo
 
 echo -e "${azul}Baixando o ssh${fim}"
 sleep 2s
-if [ -d ssh ]; then
-    echo -e "${verde}O diretório existe${fim}"
-else
-    git clone https://github.com/frib3iro/ssh
+if git clone https://github.com/frib3iro/ssh
+then
     echo -e "${verde}Sucesso!${fim}"
+else
+    echo -e "${vermelho}Falhou!${fim}"
+    exit 1
 fi
 echo
 
 echo -e "${azul}Baixando o ubuntu${fim}"
 sleep 2s
-if [ -d ubuntu ]; then
-    echo -e "${verde}O diretório existe${fim}"
-else
-    git clone https://github.com/frib3iro/ubuntu
+if git clone https://github.com/frib3iro/ubuntu
+then
     echo -e "${verde}Sucesso!${fim}"
+else
+    echo -e "${vermelho}Falhou!${fim}"
+    exit 1
+fi
+echo
+
+echo -e "${azul}Baixando o github${fim}"
+sleep 2s
+if git clone https://github.com/frib3iro/github
+then
+    echo -e "${verde}Sucesso!${fim}"
+else
+    echo -e "${vermelho}Falhou!${fim}"
+    exit 1
 fi
 echo
 
