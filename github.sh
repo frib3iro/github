@@ -33,17 +33,6 @@ else
 fi
 echo
 
-echo -e "${azul}Baixando o archlinux2${fim}"
-sleep 2s
-if git clone https://github.com/frib3iro/archlinux2
-then
-    echo -e "${verde}Sucesso!${fim}"
-else
-    echo -e "${vermelho}Falhou!${fim}"
-    exit 1
-fi
-echo
-
 echo -e "${azul}Baixando o vbz${fim}"
 sleep 2s
 if git clone https://github.com/frib3iro/vbz
@@ -124,17 +113,6 @@ echo
 echo -e "${azul}Baixando o github${fim}"
 sleep 2s
 if git clone https://github.com/frib3iro/github
-then
-    echo -e "${verde}Sucesso!${fim}"
-else
-    echo -e "${vermelho}Falhou!${fim}"
-    exit 1
-fi
-echo
-
-echo -e "${azul}Baixando a MegaSena${fim}"
-sleep 2s
-if https://github.com/frib3iro/MegaSena.git
 then
     echo -e "${verde}Sucesso!${fim}"
 else
