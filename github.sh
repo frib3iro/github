@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 
 # variaveis
-P="\033[0;30m"
 B="\033[0;34m"
 G="\033[0;32m"
-R="\033[0;31m"
 Y="\033[0;33m"
 S="\033[0;34m[+]\e[m"
 F="\e[m"
@@ -40,7 +38,7 @@ do
         echo -e "${S} ${Y}Clonando o repositório $i ${F}"
         sleep 2
         git clone https://github.com/frib3iro/$i
-        echo -e "${S} ${G}Repositório $i baixado com sucesso!!${F}"
+        echo -e "${S} ${G}Repositório $i clonado com sucesso!!${F}"
         echo
         sleep 2
     fi
