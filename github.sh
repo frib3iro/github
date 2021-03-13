@@ -1,145 +1,50 @@
 #!/usr/bin/env bash
 
 # variaveis
-azul='\e[34;1m'
-verde='\e[32;1m'
-vermelho='\e[31;1m'
-amarelo='\e[33;1m'
-seta='\e[32;1m--->\e[m'
-fim='\e[m'
+P="\033[0;30m"
+B="\033[0;34m"
+G="\033[0;32m"
+R="\033[0;31m"
+Y="\033[0;33m"
+S="\033[0;34m[+]\e[m"
+F="\e[m"
+
+lista=(archlinux gnome Bash bspwm ubuntu github debian vbz grub ssh testes MegaSena install archvirt cinnamon zshell plymouth i3wm shell-progressbar)
 
 clear && cd /home/fabio
 
-if [ -d GitHub ]; then
-    rm -rf GitHub
-    echo -e "${azul}Criando repositório GitHub${fim}"
-    mkdir GitHub && cd GitHub
-    echo -e "${verde}Sucesso!${fim}"
-else
-    echo -e "${azul}Criando repositório GitHub${fim}"
-    mkdir GitHub && cd GitHub
-    echo -e "${verde}Sucesso!${fim}"
-fi
-echo
-
-echo -e "${azul}Baixando o archlinux${fim}"
-sleep 2s
-if git clone https://github.com/frib3iro/archlinux
+if [ -e GitHub ]
 then
-    echo -e "${verde}Sucesso!${fim}"
+   echo -e "${S} ${Y}O diretório GitHub existe${F}"
+   echo
+   sleep 2
+   cd GitHub
 else
-    echo -e "${vermelho}Falhou!${fim}"
-    exit 1
+   echo -e "${S} ${Y}O diretório GitHub não existe e será criado${F}"
+   echo
+   sleep 2
+   mkdir GitHub && cd GitHub
+   echo -e "${S} ${G}Repositório GitHub criado com sucesso!${F}"
+   echo
+   sleep 2
 fi
-echo
 
-echo -e "${azul}Baixando o vbz${fim}"
-sleep 2s
-if git clone https://github.com/frib3iro/vbz
-then
-    echo -e "${verde}Sucesso!${fim}"
-else
-    echo -e "${vermelho}Falhou!${fim}"
-    exit 1
-fi
-echo
+for i in ${lista[@]}
+do
+   if [ -d $i ]
+   then
+        echo -e "${S} ${Y}O repositório $i existe${F}"
+        echo
+        sleep 2
+    else
+        echo -e "${S} ${Y}Clonando o repositório $i ${F}"
+        sleep 2
+        git clone https://github.com/frib3iro/$i
+        echo -e "${S} ${G}Repositório $i baixado com sucesso!!${F}"
+        echo
+        sleep 2
+    fi
+done
 
-echo -e "${azul}Baixando o zshell${fim}"
-sleep 2s
-if git clone https://github.com/frib3iro/zshell
-then
-    echo -e "${verde}Sucesso!${fim}"
-else
-    echo -e "${vermelho}Falhou!${fim}"
-    exit 1
-fi
+echo -e "${S} ${G}Clonagem dos repositórios finalizada com sucesso!${F}"
 echo
-
-echo -e "${azul}Baixando o gnome${fim}"
-sleep 2s
-if git clone https://github.com/frib3iro/gnome
-then
-    echo -e "${verde}Sucesso!${fim}"
-else
-    echo -e "${vermelho}Falhou!${fim}"
-    exit 1
-fi
-echo
-
-echo -e "${azul}Baixando o bin${fim}"
-sleep 2s
-if git clone https://github.com/frib3iro/bin
-then
-    echo -e "${verde}Sucesso!${fim}"
-else
-    echo -e "${vermelho}Falhou!${fim}"
-    exit 1
-fi
-echo
-
-echo -e "${azul}Baixando o bspwm${fim}"
-sleep 2s
-if git clone https://github.com/frib3iro/bspwm
-then
-    echo -e "${verde}Sucesso!${fim}"
-else
-    echo -e "${vermelho}Falhou!${fim}"
-    exit 1
-fi
-echo
-
-echo -e "${azul}Baixando o ssh${fim}"
-sleep 2s
-if git clone https://github.com/frib3iro/ssh
-then
-    echo -e "${verde}Sucesso!${fim}"
-else
-    echo -e "${vermelho}Falhou!${fim}"
-    exit 1
-fi
-echo
-
-echo -e "${azul}Baixando o ubuntu${fim}"
-sleep 2s
-if git clone https://github.com/frib3iro/ubuntu
-then
-    echo -e "${verde}Sucesso!${fim}"
-else
-    echo -e "${vermelho}Falhou!${fim}"
-    exit 1
-fi
-echo
-
-echo -e "${azul}Baixando o github${fim}"
-sleep 2s
-if git clone https://github.com/frib3iro/github
-then
-    echo -e "${verde}Sucesso!${fim}"
-else
-    echo -e "${vermelho}Falhou!${fim}"
-    exit 1
-fi
-echo
-
-echo -e "${azul}Baixando o archvirt${fim}"
-sleep 2s
-if https://github.com/frib3iro/archvirt.git
-then
-    echo -e "${verde}Sucesso!${fim}"
-else
-    echo -e "${vermelho}Falhou!${fim}"
-    exit 1
-fi
-echo
-
-echo -e "${azul}Baixando Mega-Sena${fim}"
-sleep 2s
-if https://github.com/frib3iro/MegaSena.git
-then
-    echo -e "${verde}Sucesso!${fim}"
-else
-    echo -e "${vermelho}Falhou!${fim}"
-    exit 1
-fi
-echo
-
