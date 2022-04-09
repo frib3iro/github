@@ -4,10 +4,10 @@
 B="\033[0;34m"
 G="\033[0;32m"
 Y="\033[0;33m"
-S="\033[0;34m[+]\e[m"
+S="\033[0;34m>>>\e[m"
 F="\e[m"
 
-lista=(archlinux debian bspwm archlinuxMBR ssh github vbz Java gnome frib3iro JavaGame_DoomFire Snake curso-java-basico Bash archvirt grub MegaSena cinnamon zshell plymouth i3wm shell-progressbar)
+lista=(archlinux archlinuxMBR archteste Bash bspwm cinnamon curso-java-basico debian github gnome grub i3wm Java MegaSena plymouth Snake ssh vbz zsh)
 
 clear && cd /home/fabio
 

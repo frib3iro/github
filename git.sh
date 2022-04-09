@@ -10,60 +10,66 @@
 #----------------------------------------------------------------------
 # Uso       :
 #----------------------------------------------------------------------
+# variaveis
+B="\033[0;34m"
+G="\033[0;32m"
+Y="\033[0;33m"
+S="\033[0;34m>>>\e[m"
+F="\e[m"
 
 
 echo "Configurando o git..."
 sleep 2
 
 echo
-echo "Configurando o nome de usuário..."
+echo -e "${S} ${Y}Configurando o nome de usuário...${F}"
 sleep 2
 if git config --global user.name "Fabio Junior Ribeiro"
 then
-    echo "Sucesso!"
+    echo -e "${S} ${G}Sucesso!${F}"
 else
-    echo "Falhou!"
+    echo -e "${S} ${R}Falhou!${F}"
 fi
 
 echo
-echo "Configurando o email..."
+echo -e "${S} ${Y}Configurando o email...${F}"
 sleep 2
 if git config --global user.email "rib3iro@live.com"
 then
-    echo "Sucesso!"
+    echo -e "${S} ${G}Sucesso!${F}"
 else
-    echo "Falhou!"
+    echo -e "${S} ${R}Falhou!${F}"
 fi
 
 echo
-echo "Configurando o vim como editor padrão..."
+echo -e "${S} ${Y}Configurando o vim como editor padrão...${F}"
 sleep 2
 if git config --global core.editor vim
 then
-    echo "Sucesso!"
+    echo -e "${S} ${G}Sucesso!${F}"
 else
-    echo "Falhou!"
+    echo -e "${S} ${R}Falhou!${F}"
 fi
 
 echo
-echo "Configurando o vimdiff..."
+echo -e "${S} ${Y}Configurando o vimdiff...${F}"
 sleep 2
 if git config --global core.editor vimdiff
 then
-    echo "Sucesso!"
+    echo -e "${S} ${G}Sucesso!${F}"
 else
-    echo "Falhou!"
+    echo -e "${S} ${R}Falhou!${F}"
 fi
 
 echo
-echo "Colorindo as cores na saída do git..."
+echo -e "${S} ${Y}Colorindo as cores na saída do git...${F}"
 sleep 2
 git config --global color.ui auto
 git config --global color.branch auto
 git config --global color.status auto
 
 echo
-echo "Listando todas as configurações..."
+echo -e "${S} ${Y}Listando todas as configurações...${F}"
 sleep 2
 echo
 git config --list | more
