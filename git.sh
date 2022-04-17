@@ -14,15 +14,16 @@
 B="\033[0;34m"
 G="\033[0;32m"
 Y="\033[0;33m"
-S="\033[0;34m>>>\e[m"
+S="\033[0;35m>>>\e[m"
 F="\e[m"
+#----------------------------------------------------------------------
+clear
 
-
-echo "Configurando o git..."
+echo -e "${S} ${B}Configurando o git...${F}"
 sleep 2
 
 echo
-echo -e "${S} ${Y}Configurando o nome de usuário...${F}"
+echo -e "${S} ${B}Configurando o nome de usuário...${F}"
 sleep 2
 if git config --global user.name "Fabio Junior Ribeiro"
 then
@@ -32,7 +33,7 @@ else
 fi
 
 echo
-echo -e "${S} ${Y}Configurando o email...${F}"
+echo -e "${S} ${B}Configurando o email...${F}"
 sleep 2
 if git config --global user.email "rib3iro@live.com"
 then
@@ -42,7 +43,7 @@ else
 fi
 
 echo
-echo -e "${S} ${Y}Configurando o vim como editor padrão...${F}"
+echo -e "${S} ${B}Configurando o vim como editor padrão...${F}"
 sleep 2
 if git config --global core.editor vim
 then
@@ -52,7 +53,7 @@ else
 fi
 
 echo
-echo -e "${S} ${Y}Configurando o vimdiff...${F}"
+echo -e "${S} ${B}Configurando o vimdiff...${F}"
 sleep 2
 if git config --global core.editor vimdiff
 then
@@ -62,14 +63,14 @@ else
 fi
 
 echo
-echo -e "${S} ${Y}Colorindo as cores na saída do git...${F}"
+echo -e "${S} ${B}Colorindo as cores na saída do git...${F}"
 sleep 2
 git config --global color.ui auto
 git config --global color.branch auto
 git config --global color.status auto
 
 echo
-echo -e "${S} ${Y}Listando todas as configurações...${F}"
+echo -e "${S} ${B}Listando todas as configurações...${F}"
 sleep 2
 echo
 git config --list | more
