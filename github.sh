@@ -15,7 +15,7 @@ F='\e[m'
 LOG=erro.txt
 # ------------------------------------------------------
 
-lista=(arch archlinux archlinuxMBR bspwm cinnamon curso-java-basico debian github gnome grub i3wm Java JavaGame_DoomFire MegaSena plymouth Scripts Snake ssh vbz zsh)
+lista=(arch archlinux archlinuxMBR bspwm cinnamon curso-java-basico debian github grub i3wm Java JavaGame_DoomFire MegaSena plymouth Scripts Snake ssh vbz zsh)
 
 clear && cd /home/fabio
 
