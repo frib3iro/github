@@ -63,11 +63,34 @@ else
 fi
 
 echo
-echo -e "${S} ${B}Colorindo as cores na saída do git...${F}"
+echo -e "${S} ${B}Colorindo o ui...${F}"
 sleep 2
-git config --global color.ui auto
-git config --global color.branch auto
-git config --global color.status auto
+if git config --global color.ui auto
+then
+    echo -e "${S} ${G}Sucesso!${F}"
+else
+    echo -e "${S} ${R}Falhou!${F}"
+fi
+
+echo
+echo -e "${S} ${B}Colorindo o branch...${F}"
+sleep 2
+if git config --global color.branch auto
+then
+    echo -e "${S} ${G}Sucesso!${F}"
+else
+    echo -e "${S} ${R}Falhou!${F}"
+fi
+
+echo
+echo -e "${S} ${B}Colorindo o status...${F}"
+sleep 2
+if git config --global color.status auto
+then
+    echo -e "${S} ${G}Sucesso!${F}"
+else
+    echo -e "${S} ${R}Falhou!${F}"
+fi 
 
 echo
 echo -e "${S} ${B}Listando todas as configurações...${F}"
